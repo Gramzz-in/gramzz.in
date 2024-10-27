@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gramzz - Healthy Food Delivered</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        /* Theme switcher */
+        body.dark-theme {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        header {
+            background-color: rgba(42, 157, 143, 0.5);
+            padding: 20px;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.5s ease;
+        }
+
+        body.dark-theme .nav-links a {
+            color: #e0e0e0;
+        }
+
+        /* Hero section with random image effect */
+        #hero {
+            background: url('https://source.unsplash.com/random/1200x800') no-repeat center center/cover;
+            height: 90vh;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(20px);
+        }
+
+        .cta {
+            padding: 10px 20px;
+            background-color: #f4a261;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        /* Glassmorphic effect */
+        .glassmorphic {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .product, .plan {
+            background: rgba(233, 236, 239, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product:hover, .plan:hover {
+            transform: scale(1.05);
+        }
+
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+            border-collapse: collapse;
+            backdrop-filter: blur(10px);
+        }
+
+        table, th, td {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            backdrop-filter: blur(10px);
+        }
+
+        th {
+            background-color: rgba(42, 157, 143, 0.5);
+            color: white;
+        }
+
+        body.dark-theme th {
+            background-color: rgba(42, 157, 143, 0.8);
+        }
+
+        td {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(42, 157, 143, 0.5);
+            backdrop-filter: blur(15px);
+            color: #ffffff;
+        }
+
+        /* Theme switcher button */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(244, 162, 97, 0.8);
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.5s ease;
+        }
+
+        .theme-toggle:hover {
+            background-color: #f4a261;
+        }
+    </style>
+    <script>
+        // Theme toggle function
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
+</head>
+<body>
+    <header class="glassmorphic">
+        <nav>
+            <div class="logo">Gramzz</div>
+            <ul class="nav-links">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#plans">Plans</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero" class="glassmorphic">
+        <div class="hero-content">
+            <h1>Welcome to Gramzz</h1>
+            <p>Making healthy eating accessible, convenient, and enjoyable!</p>
+            <a href="#plans" class="cta">Explore Plans</a>
+        </div>
+    </section>
+
+    <section id="about" class="section glassmorphic">
+        <h2>About Us</h2>
+        <p>Gramzz is a health-focused food delivery service based in Hyderabad, India. We provide a variety of products aimed at meeting daily nutritional needs, including sliced fruits, dry fruits, salads, and millet-based products. Our goal is to make healthy eating convenient, accessible, and fun!</p>
+    </section>
+
+    <section id="products" class="section">
+        <h2>Our Product Offerings</h2>
+        <div class="product-container">
+            <div class="product glassmorphic">
+                <h3>Fresh Fruits</h3>
+                <p>Seasonal, sliced fruits, freshly sourced to provide the right balance of vitamins, minerals, and fiber.</p>
+            </div>
+            <div class="product glassmorphic">
+                <h3>Healthy Salads</h3>
+                <p>Ready-to-eat salads composed of fresh vegetables, fruits, and additional healthy components like nuts or seeds.</p>
+            </div>
+            <div class="product glassmorphic">
+                <h3>Dry Fruits</h3>
+                <p>Almonds, Pistachios, and more to offer your daily dose of nutrients.</p>
+            </div>
+            <div class="product glassmorphic">
+                <h3>Millet-Based Meals</h3>
+                <p>Pre-prepared millet-based batters rich in protein, fiber, calcium, and magnesium, helping in weight management and improving digestion.</p>
+            </div>
+        </div>
+    </section>
+ <!-- 
+    <section id="products" class="section glassmorphic">
+    <h2>Fruits Pricing Table</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Fruit</th>
+                <th>Price (per unit)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Apple</td><td>₹10</td></tr>
+            <tr><td>Kiwi</td><td>₹40</td></tr>
+            <tr><td>Orange</td><td>₹15</td></tr>
+            <tr><td>Dragon Fruit</td><td>₹50</td></tr>
+            <tr><td>Pomegranate</td><td>₹30</td></tr>
+            <tr><td>Watermelon</td><td>₹20</td></tr>
+            <tr><td>Guava</td><td>₹60</td></tr>
+            <tr><td>Avocado</td><td>₹45</td></tr>
+            <tr><td>Muskmelon</td><td>₹20</td></tr>
+            <tr><td>Banana</td><td>₹5</td></tr>
+            <tr><td>Papaya</td><td>₹10</td></tr>
+            <tr><td>Pineapple</td><td>₹20</td></tr>
+            <tr><td>Custard Apple</td><td>₹30</td></tr>
+            <tr><td>Grapes</td><td>₹30</td></tr>
+            <tr><td>Sapota (Chikoo)</td><td>₹20</td></tr>
+            <tr><td>Mango</td><td>₹20</td></tr>
+            <tr><td>Strawberry</td><td>₹40</td></tr>
+        </tbody>
+    </table>
+</section>
+
+<section id="veggies" class="section glassmorphic">
+    <h2>Veggies Pricing Table</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Veggie</th>
+                <th>Price (per kg)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Carrot</td><td>To be updated</td></tr>
+            <tr><td>Beetroot</td><td>To be updated</td></tr>
+            <tr><td>Cucumber</td><td>To be updated</td></tr>
+            <tr><td>Broccoli</td><td>To be updated</td></tr>
+        </tbody>
+    </table>
+</section>
+
+<section id="dry-fruits" class="section glassmorphic">
+    <h2>Dry Fruits Pricing Table</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Dry Fruit</th>
+                <th>Price (per kg)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Almonds</td><td>₹700</td></tr>
+            <tr><td>Pistachios</td><td>₹1460</td></tr>
+            <tr><td>Anjeer (Figs)</td><td>₹1200</td></tr>
+            <tr><td>Cashew Nuts</td><td>₹1200</td></tr>
+            <tr><td>Kismiss (Raisins)</td><td>₹200</td></tr>
+            <tr><td>Walnuts</td><td>₹1000</td></tr>
+        </tbody>
+    </table>
+</section>
+
+<section id="sprouts" class="section glassmorphic">
+    <h2>Sprouts Pricing Table</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Sprout</th>
+                <th>Price (per kg)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Green Gram</td><td>₹100</td></tr>
+            <tr><td>Brown Gram</td><td>₹110</td></tr>
+            <tr><td>Ground Nuts</td><td>₹120</td></tr>
+        </tbody>
+    </table>
+</section>
+
+-->
+
+    <section id="plans" class="section glassmorphic">
+        <h2>Subscription Plans</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Plan Name</th>
+                    <th>Details</th>
+                    <th>Price (Per Month)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Basic Box</td>
+                    <td>2 Fruits, 2 Veggies, 1 Boiled Egg, 1 Sprout or 1 Dry Fruit (250-300gms)</td>
+                    <td>Starting from ₹1299</td>
+                </tr>
+                <tr>
+                    <td>Standard Box</td>
+                    <td>4 Fruits, 2 Veggies, 1 Boiled Egg, 2 Sprouts, 2 Dry Fruits (300-350gms)</td> <td>Starting from ₹1,699</td> </tr> <tr> <td>Premium Box</td> <td>5 Fruits, 3 Veggies, 2 Boiled Eggs, 2 Sprouts, 2 Dry Fruits (400-500gms)</td> <td>Starting from ₹2,299</td> </tr> </tbody> </table>
+    <h3>Even-odd days Plan</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Box Type</th>
+                <th>Price (Per Month)</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Basic Plan Box</td>
+                <td>₹1,500</td>
+                <td>22 days of alternate delivery of 6 channels (2 fruits, 2 veggies, 1 sprout, 1 dry fruit, 1 egg)</td>
+            </tr>
+            <tr>
+                <td>Standard Plan Box</td>
+                <td>₹2,299</td>
+                <td>22 days of alternate delivery of 10 channels (4 fruits, 2 veggies, 1 sprout, 2 dry fruits, 1 egg)</td>
+            </tr>
+            <tr>
+                <td>Premium Plan Box</td>
+                <td>₹2,999</td>
+                <td>22 days of alternate delivery of 13 channels (6 fruits, 3 veggies, 1 sprout, 2 dry fruits, 2 eggs)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Weekly Plan</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Box Type</th>
+                <th>Price (Per Month)</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Basic Plan Box</td>
+                <td>₹1,299</td>
+                <td>20 days of delivery (Mon to Fri) with 6 channels of nutrition</td>
+            </tr>
+            <tr>
+                <td>Standard Plan Box</td>
+                <td>₹2,199</td>
+                <td>20 days of delivery (Mon to Fri) with 10 channels of nutrition</td>
+            </tr>
+            <tr>
+                <td>Premium Plan Box</td>
+                <td>₹2,789</td>
+                <td>20 days of delivery (Mon to Fri) with 13 channels of nutrition</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Alternative Day Plan</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Box Type</th>
+                <th>Price (Per Month)</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Basic Plan Box</td>
+                <td>₹999</td>
+                <td>12 days of even and odd day delivery with 6 channels of nutrition</td>
+            </tr>
+            <tr>
+                <td>Standard Plan Box</td>
+                <td>₹1,499</td>
+                <td>12 days of even and odd day delivery with 10 channels of nutrition</td>
+            </tr>
+            <tr>
+                <td>Premium Plan Box</td>
+                <td>₹2,249</td>
+                <td>12 days of even and odd day delivery with 13 channels of nutrition</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section id="contact" class="section glassmorphic">
+    <h2>Contact Us</h2>
+    <p>Email: info@gramzz.in</p>
+    <p>Phone: +91 1234567890</p>
+</section>
+
+<footer class="glassmorphic">
+    <p>&copy; 2024 Gramzz. All rights reserved.</p>
+</footer>
+
+<button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+
